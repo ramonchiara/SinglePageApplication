@@ -1,19 +1,54 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
         <meta charset="UTF-8">
+        <title>Minha Loja</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="js/libs/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="js/libs/twitter-bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Minha Loja</h1>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3">
+                        <h2>Filtros</h2>
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="min">Preço Mínimo</label>
+                                <input type="range" id="min" class="form-control" min="0" max="10000" value="0">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="max">Preço Máximo</label>
+                                    <input type="range" id="max" class="form-control" min="0" max="10000" value="10000">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                        <h2>Produtos</h2>
+                        <ul>
+                            <li>Produto 1 - R$ 100,00</li>
+                            <li>Produto 2 - R$ 200,00</li>
+                            <li>Produto 3 - R$ 300,00</li>
+                            <li>Produto 4 - R$ 400,00</li>
+                            <li>Produto 5 - R$ 500,00</li>
+                            <li>Produto 6 - R$ 600,00</li>
+                            <li>Produto 7 - R$ 700,00</li>
+                            <li>Produto 8 - R$ 800,00</li>
+                            <li>Produto 9 - R$ 900,00</li>
+                            <li>Produto 10 - R$ 1000,00</li>
+                            <li>Produto 11 - R$ 1100,00</li>
+                            <li>Produto 12 - R$ 12  00,00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
         <script src="js/libs/twitter-bootstrap/js/bootstrap.js" type="text/javascript"></script>
     </body>
