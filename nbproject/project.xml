@@ -3,7 +3,36 @@
     <type>org.netbeans.modules.web.clientproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/clientside-project/1">
-            <name>SpaSemAngularJs</name>
+            <name>SinglePageApplication</name>
         </data>
+        <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1">
+            <library name="jquery" version="3.2.1">
+                <file localPath="public_html/js/libs/jquery/core.js" path="core.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.js" path="jquery.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.min.js" path="jquery.min.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.min.map" path="jquery.min.map"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.js" path="jquery.slim.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.min.js" path="jquery.slim.min.js"/>
+                <file localPath="public_html/js/libs/jquery/jquery.slim.min.map" path="jquery.slim.min.map"/>
+            </library>
+            <library name="twitter-bootstrap" version="3.3.7">
+                <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap-theme.css" path="css/bootstrap-theme.css"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap-theme.css.map" path="css/bootstrap-theme.css.map"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap-theme.min.css" path="css/bootstrap-theme.min.css"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap-theme.min.css.map" path="css/bootstrap-theme.min.css.map"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap.css" path="css/bootstrap.css"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap.css.map" path="css/bootstrap.css.map"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap.min.css" path="css/bootstrap.min.css"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/css/bootstrap.min.css.map" path="css/bootstrap.min.css.map"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/fonts/glyphicons-halflings-regular.eot" path="fonts/glyphicons-halflings-regular.eot"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/fonts/glyphicons-halflings-regular.svg" path="fonts/glyphicons-halflings-regular.svg"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/fonts/glyphicons-halflings-regular.ttf" path="fonts/glyphicons-halflings-regular.ttf"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/fonts/glyphicons-halflings-regular.woff" path="fonts/glyphicons-halflings-regular.woff"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/fonts/glyphicons-halflings-regular.woff2" path="fonts/glyphicons-halflings-regular.woff2"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/js/bootstrap.js" path="js/bootstrap.js"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/js/bootstrap.min.js" path="js/bootstrap.min.js"/>
+                <file localPath="public_html/js/libs/twitter-bootstrap/js/npm.js" path="js/npm.js"/>
+            </library>
+        </libraries>
     </configuration>
 </project>
