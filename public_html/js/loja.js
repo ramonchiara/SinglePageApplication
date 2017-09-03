@@ -1,14 +1,19 @@
-// executa o código quando o documento estiver pronto (ready), ou seja, após seu carregamento completo
+// executa o código quando o documento estiver pronto (ready), ou seja, após 
+// seu carregamento completo
 $(document).ready(function () {
 
-    // trata o evento input do slider min: quando mudar, deve atualizar o span minPreco
+    // trata o evento input do slider min: quando mudar, deve atualizar o span 
+    // minPreco e a lista de produtos, de acordo com o novo valor desse filtro
     $('#min').on('input', function () {
         atualizaMinPreco();
+        atualizaProdutos();
     });
 
-    // trata o evento input do slider max: quando mudar, deve atualizar o span maxPreco
+    // trata o evento input do slider max: quando mudar, deve atualizar o span 
+    // maxPreco e a lista de produtos, de acordo com o novo valor desse filtro
     $('#max').on('input', function () {
         atualizaMaxPreco();
+        atualizaProdutos();
     });
 
     // função para atualizar o span minPreco com o valor do slider min
@@ -29,11 +34,33 @@ $(document).ready(function () {
             url: 'produtos.json',
             method: 'GET',
             success: function (data) {
-                for (p of data) {
-                    $('#produtos').append('<li>' + p.nome + ' - ' + 'R$ ' + p.preco.toFixed(2) + '</li>');
-                }
+                // coloca a lista de produtos que veio em data na nossa 
+                // variável que guarda os produtos e chama a função para 
+                // atualizar a lista
+                produtos = data;
+                atualizaProdutos();
             }
         });
+    }
+
+    var produtos = [];
+
+    // função para atualizar a lista de produtos de acordo com a variável 
+    // produtos e de acordo com os filtros min e max
+    function atualizaProdutos() {
+        var min = $('#min').val();
+        var max = $('#max').val();
+
+        // limpa a lista, antes de preenchê-la com os produtos
+        $('#produtos').html('');
+
+        // passa pela nossa variável que guarda os produtos, filtrando-a de 
+        // acordo com os valores em min e max
+        for (p of produtos) {
+            if (p.preco >= min && p.preco <= max) {
+                $('#produtos').append('<li>' + p.nome + ' - ' + 'R$ ' + p.preco.toFixed(2) + '</li>');
+            }
+        }
     }
 
     /* inicialmente, os spans minPreco e maxPreco estão sem valores; assim, 
