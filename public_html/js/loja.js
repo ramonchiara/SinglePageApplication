@@ -63,6 +63,10 @@ $(document).ready(function () {
                 $('#produtos').append('<li>' + p.nome + ' - ' + 'R$ ' + p.preco.toFixed(2) + '</li>');
             }
         }
+
+        if ($('#produtos').html() === '') {
+            $('#produtos').html('<li>Nenhum produto atende o critério especificado nos filtros...</li>')
+        }
     }
 
     function ajustaMinMax() {
