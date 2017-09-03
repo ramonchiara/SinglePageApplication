@@ -39,6 +39,8 @@ $(document).ready(function () {
                 // atualizar a lista
                 produtos = data;
                 atualizaProdutos();
+
+                ajustaMinMax();
             }
         });
     }
@@ -61,6 +63,49 @@ $(document).ready(function () {
                 $('#produtos').append('<li>' + p.nome + ' - ' + 'R$ ' + p.preco.toFixed(2) + '</li>');
             }
         }
+    }
+
+    function ajustaMinMax() {
+        var menorPreco = encontraMenorPreco();
+        var maiorPreco = encontraMaiorPreco();
+
+        $('#min').attr('min', menorPreco);
+        $('#min').attr('max', maiorPreco);
+        atualizaMinPreco();
+
+        $('#max').attr('min', menorPreco);
+        $('#max').attr('max', maiorPreco);
+        atualizaMaxPreco();
+    }
+
+    function encontraMenorPreco() {
+        var menor = 0;
+
+        if (produtos.length > 0) {
+            menor = produtos[0].preco;
+            for (p of produtos) {
+                if (p.preco < menor) {
+                    menor = p.preco;
+                }
+            }
+        }
+
+        return menor;
+    }
+
+    function encontraMaiorPreco() {
+        var maior = 0;
+
+        if (produtos.length > 0) {
+            maior = produtos[0].preco;
+            for (p of produtos) {
+                if (p.preco > maior) {
+                    maior = p.preco;
+                }
+            }
+        }
+
+        return maior;
     }
 
     /* inicialmente, os spans minPreco e maxPreco estão sem valores; assim, 
