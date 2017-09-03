@@ -60,12 +60,12 @@ $(document).ready(function () {
         // acordo com os valores em min e max
         for (p of produtos) {
             if (p.preco >= min && p.preco <= max) {
-                $('#produtos').append('<li>' + p.nome + ' - ' + 'R$ ' + p.preco.toFixed(2) + '</li>');
+                $('#produtos').append('<div class="col-xs-12 col-sm-4"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">' + p.nome + '</h3></div><div class="panel-body"><p>R$ ' + p.preco.toFixed(2) + '<p></div></div></div>');
             }
         }
 
         if ($('#produtos').html() === '') {
-            $('#produtos').html('<li>Nenhum produto atende o critério especificado nos filtros...</li>')
+            $('#produtos').html('<div class="col-xs-12"><p class="alert alert-warning">Nenhum produto atende o critério especificado nos filtros...</p></div>')
         }
     }
 
