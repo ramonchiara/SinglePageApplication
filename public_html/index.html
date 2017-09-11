@@ -19,12 +19,12 @@
                         <form action="#">
                             <div class="form-group">
                                 <label for="min">Preço Mínimo: {{min | currency}}</label>
-                                <input type="range" id="min" class="form-control" min="0" max="10000" value="0" ng-model="min">
+                                <input type="range" id="min" class="form-control" min="{{minPreco}}" max="{{maxPreco}}" value="0" ng-model="min">
                             </div>
                             <div class="form-group">
                                 <div class="form-group">
                                     <label for="max">Preço Máximo  {{max | currency}}</label>
-                                    <input type="range" id="max" class="form-control" min="0" max="10000" value="10000" ng-model="max">
+                                    <input type="range" id="max" class="form-control" min="{{minPreco}}" max="{{maxPreco}}" value="10000" ng-model="max">
                                 </div>
                             </div>
                         </form>
