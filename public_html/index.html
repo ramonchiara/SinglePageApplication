@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="lojaApp" ng-controller="lojaCtrl">
     <head>
         <meta charset="UTF-8">
         <title>Minha Loja</title>
@@ -18,13 +18,13 @@
                         <h2>Filtros</h2>
                         <form action="#">
                             <div class="form-group">
-                                <label for="min">Preço Mínimo: R$ <span id="minPreco"></span>,00</label>
-                                <input type="range" id="min" class="form-control" min="0" max="10000" value="0">
+                                <label for="min">Preço Mínimo: {{min | currency}}</label>
+                                <input type="range" id="min" class="form-control" min="0" max="10000" value="0" ng-model="min">
                             </div>
                             <div class="form-group">
                                 <div class="form-group">
-                                    <label for="max">Preço Máximo R$ <span id="maxPreco"></span>,00</label>
-                                    <input type="range" id="max" class="form-control" min="0" max="10000" value="10000">
+                                    <label for="max">Preço Máximo  {{max | currency}}</label>
+                                    <input type="range" id="max" class="form-control" min="0" max="10000" value="10000" ng-model="max">
                                 </div>
                             </div>
                         </form>
@@ -38,6 +38,7 @@
         </div>
         <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
         <script src="js/libs/twitter-bootstrap/js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/libs/angular.js/angular.js" type="text/javascript"></script>
         <script src="js/loja.js" type="text/javascript"></script>
     </body>
 </html>
