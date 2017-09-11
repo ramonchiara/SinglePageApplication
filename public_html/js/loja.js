@@ -9,4 +9,8 @@ app.controller('lojaCtrl', function ($scope, $http) {
     $http.get('produtos.json').then(function (response) {
         $scope.produtos = response.data;
     });
+
+    $scope.filtro = function (value, index, array) {
+        return value.preco >= $scope.min && value.preco <= $scope.max;
+    };
 });

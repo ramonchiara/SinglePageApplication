@@ -32,7 +32,7 @@
                     <div class="col-xs-12 col-sm-9">
                         <h2>Produtos</h2>
                         <ul id="produtos">
-                            <li ng-repeat="p in produtos">{{p.nome}} - {{p.preco | currency}}</li>
+                            <li ng-repeat="p in produtos | filter: filtro">{{p.nome}} - {{p.preco | currency}}</li>
                         </ul>
                     </div>
                 </div>
