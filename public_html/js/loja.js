@@ -1,4 +1,15 @@
-var app = angular.module('lojaApp', []);
+var app = angular.module('lojaApp', ['ngRoute']);
+
+app.config(function ($routeProvider) {
+    $routeProvider
+            .when("/", {
+                templateUrl: 'views/principal.html',
+                controller: 'lojaCtrl'
+            })
+            .otherwise({
+                redirectTo: "/"
+            });
+});
 
 app.controller('lojaCtrl', function ($scope, $http) {
 
