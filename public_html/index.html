@@ -32,7 +32,10 @@
                     <div class="col-xs-12 col-sm-9">
                         <h2>Produtos</h2>
                         <div class="row" id="produtos">
-                            <div class="col-xs-12 col-sm-4" ng-repeat="p in produtos | filter: filtro">
+                            <div class="col-xs-12" ng-show="filtered.length === 0">
+                                <p class="alert alert-warning">Nenhum produto atende o critério especificado nos filtros...</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-4" ng-repeat="p in produtos | filter: filtro as filtered">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">{{p.nome}}</h3>
