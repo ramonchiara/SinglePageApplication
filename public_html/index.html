@@ -31,9 +31,19 @@
                     </div>
                     <div class="col-xs-12 col-sm-9">
                         <h2>Produtos</h2>
-                        <ul id="produtos">
-                            <li ng-repeat="p in produtos | filter: filtro">{{p.nome}} - {{p.preco | currency}}</li>
-                        </ul>
+                        <div class="row" id="produtos">
+                            <div class="col-xs-12 col-sm-4" ng-repeat="p in produtos | filter: filtro">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">{{p.nome}}</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>{{p.preco | currency}}</p>
+                                        <p><a href="#" class="btn btn-info">Detalhes</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
