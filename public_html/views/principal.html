@@ -17,6 +17,10 @@
                                     <input type="text" id="keyword" class="form-control" ng-model="keyword">
                                 </div>
                             </div>
+                            <div class="radio" ng-init="order='titulo'">
+                                <label><input type="radio" name="order" ng-model="order" value="titulo"> Ordenar por nome</label>
+                                <label><input type="radio" name="order" ng-model="order" value="preco"> Ordenar por preço</label>
+                            </div>
                         </form>
                     </div>
                     <div class="col-xs-12 col-sm-9">
@@ -25,7 +29,7 @@
                             <div class="col-xs-12" ng-show="filtered.length === 0">
                                 <p class="alert alert-warning">Nenhum produto atende o critério especificado nos filtros...</p>
                             </div>
-                            <div class="col-xs-12 col-sm-4" ng-repeat="p in produtos | filter: keyword | filter: filtro as filtered">
+                            <div class="col-xs-12 col-sm-4" ng-repeat="p in produtos | orderBy: order | filter: keyword | filter: filtro as filtered">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">{{p.nome}}</h3>
