@@ -11,6 +11,12 @@
                                     <input type="range" id="max" class="form-control" min="{{minPreco}}" max="{{maxPreco}}" value="10000" ng-model="max">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="keyword">Palavra-Chave</label>
+                                    <input type="text" id="keyword" class="form-control" ng-model="keyword">
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div class="col-xs-12 col-sm-9">
@@ -19,7 +25,7 @@
                             <div class="col-xs-12" ng-show="filtered.length === 0">
                                 <p class="alert alert-warning">Nenhum produto atende o critério especificado nos filtros...</p>
                             </div>
-                            <div class="col-xs-12 col-sm-4" ng-repeat="p in produtos | filter: filtro as filtered">
+                            <div class="col-xs-12 col-sm-4" ng-repeat="p in produtos | filter: keyword | filter: filtro as filtered">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">{{p.nome}}</h3>
